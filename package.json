@@ -1,0 +1,23 @@
+{
+  "name": "htmlTemplates",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Viktor Lavrov <lvigtor@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "shx rm -rf build/ && parcel build index.js -d build/",
+    "start": "parcel serve index.html",
+    "docs": "vuepress dev book",
+    "build:docs": "vuepress build book && shx rm -rf ./docs && mv ./book/.vuepress/dist ./docs"
+  },
+  "dependencies": {
+    "parcel-bundler": "^1.12.4",
+    "snabbdom": "^0.7.4"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "vuepress": "^0.13.1"
+  }
+}
